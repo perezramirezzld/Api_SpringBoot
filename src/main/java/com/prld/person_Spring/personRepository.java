@@ -13,7 +13,7 @@ import org.springframework.data.repository.Repository;
  */
 public interface personRepository extends Repository<person, Integer>{
     List<person>findAll();
-    person findById(String id);
+    person findById(int id);
     person save(person p);
     person delete(person p);
 }

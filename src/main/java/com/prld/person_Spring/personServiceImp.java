@@ -14,25 +14,26 @@ public class personServiceImp implements personService {
     public List<person> list() {
        return repository.findAll();
     }
-
+    
     @Override
-    public person listrId(String id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public person listId(int id) {
+       return repository.findById(id);
     }
 
     @Override
     public person add(person p) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return repository.save(p);
     }
 
     @Override
     public person edit(person p) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return repository.save(p);
     }
 
     @Override
-    public person delete(String id) {
+    public person delete(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
     
 }

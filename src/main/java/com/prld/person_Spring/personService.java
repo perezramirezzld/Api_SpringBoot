@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface personService {
     List<person>list();
-    person listrId(String id);
+    person listId(int id);
     person add(person p);
     person edit(person p);
-    person delete(String id);
+    person delete(int id);
 }
